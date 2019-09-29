@@ -1,13 +1,21 @@
 import React from 'react';
-import ProductList from './pages/product-list';
-import Header from './components/header';
+import Home from './pages/home';
+import About from './pages/about';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <ProductList />
-    </div>
+    <Router>
+      {/* ROUTES */}
+      <Switch>
+        <Route path="/about-us">
+          <About />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
