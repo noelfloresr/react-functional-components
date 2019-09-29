@@ -1,5 +1,6 @@
 import React from 'react';
 import {products} from '../data/products';
+import  '../styles/main.scss'
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -20,13 +21,9 @@ const ProductList = () => {
             </Card>
         </Grid>
     )
-    const layoutStyle = {
-        maxWidth: 1090, 
-        margin: 'auto',
-        marginTop: 50
-    }
+
     return (
-        <div style={layoutStyle}>
+        <div className="grid-container">
             <Grid container >
                 {list}
             </Grid>
